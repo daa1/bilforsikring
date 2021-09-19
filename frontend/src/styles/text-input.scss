@@ -1,0 +1,21 @@
+.text-input {
+  input {
+    border: 1px solid #000;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: block;
+    padding: 8px;
+    width: 100%;
+    transition: box-shadow 0.15s ease-in-out;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #000;
+    }
+  }
+  &.has-error input {
+    border-color: #ab1f24;
+    &:focus {
+      box-shadow: 0 0 0 2px #ab1f24;
+    }
+  }
+}

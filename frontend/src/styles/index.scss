@@ -1,0 +1,104 @@
+@use "node_modules/normalize.css/normalize.css";
+@use "text-input";
+@use "select-input";
+
+@font-face {
+  font-family: "Profilfont";
+  src: url("../assets/fonts/Profilfont-Regular-Web.woff2") format("woff2"),
+    url("../assets/fonts/Profilfont-Regular-Web.woff") format("woff");
+}
+
+html {
+  font-family: Profilfont, Arial, serif;
+}
+
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+h1,
+.heading-1 {
+  color: #0a0909;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+p,
+.paragraph {
+  color: #0a0909;
+  font-size: 1.375rem;
+  font-weight: normal;
+}
+
+.validation-error {
+  color: #ab1f24;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.label {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: 1px solid #000;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 7px 20px;
+  transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+  .btn-medium {
+    min-width: 100px;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #000;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #000;
+}
+
+.form-row .col {
+  margin-bottom: 1rem;
+}
+
+.margin-right {
+  margin-right: 1rem !important;
+}
+
+.margin-top {
+  margin-top: 1rem !important;
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .label.no-wrap {
+    white-space: nowrap;
+  }
+
+  .form-row {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: 241px 241px;
+  }
+}

@@ -1,0 +1,33 @@
+.select-wrapper {
+  position: relative;
+  select {
+    border: 1px solid #000;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 8px 44px 8px 8px; //Høyre padding er større for å få plass til ikon
+    margin: 0;
+    transition: box-shadow 0.15s ease-in-out;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #000;
+    }
+  }
+  &.has-error select {
+    border-color: #ab1f24;
+    &:focus {
+      box-shadow: 0 0 0 2px #ab1f24;
+    }
+  }
+  &::after {
+    background: url(../assets/arrow_downward.svg);
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    height: 16px;
+    width: 16px;
+  }
+}
