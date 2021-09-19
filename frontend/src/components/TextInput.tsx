@@ -10,7 +10,7 @@ type TextInputProps = {
   required?: boolean;
   pattern?: RegExp;
   hasError?: boolean;
-  register: UseFormRegister<any>;
+  register?: UseFormRegister<any>;
 };
 
 export default function TextInput({
@@ -29,7 +29,12 @@ export default function TextInput({
       <label className={"label" + (required ? " required" : "") + (labelNoWrap ? " no-wrap" : "")} htmlFor={id}>
         {labelText}
       </label>
-      <input type="text" id={id} placeholder={placeholderText} {...register(fieldName, { required: required, pattern: pattern })} />
+      <input
+        type="text"
+        id={id}
+        placeholder={placeholderText}
+        {...(register && register(fieldName, { required: required, pattern: pattern }))}
+      />
     </div>
   );
 }

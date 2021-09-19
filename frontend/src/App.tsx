@@ -138,7 +138,9 @@ function App() {
         </div>
 
         <div className="margin-top">
-          <input type="submit" className="btn-primary margin-right" value="Kjøp" />
+          <button type="submit" className="btn-primary margin-right">
+            Kjøp
+          </button>
           <button type="button" className="btn-secondary" onClick={() => reset()}>
             Avbryt
           </button>

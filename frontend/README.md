@@ -1,5 +1,21 @@
-docker build --tag node-docker .
-docker run --publish 80:80 node-docker
+## Lag image av tjenesten
+Artifakt må være bygger før kjøring av denne
+```Bash
+docker build --tag frontend .
+```
+
+## Kjør opp bygget image som container
+```Bash
+docker run --publish 80:80 frontend
+```
+
+## Starte tjeneste utenfor docker
+```Bash
+yarn start
+```
+
+
+docker run --publish 80:80 frontend
 
 
 # Getting Started with Create React App
