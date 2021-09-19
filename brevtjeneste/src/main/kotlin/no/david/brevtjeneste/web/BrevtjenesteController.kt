@@ -2,7 +2,7 @@ package no.david.brevtjeneste.web
 
 import no.david.brevtjeneste.model.Avtale
 import no.david.brevtjeneste.model.AvtaleStatus
-import no.david.brevtjeneste.model.OpprettAvtale
+import no.david.brevtjeneste.model.SendAvtaleTilKunde
 import no.david.brevtjeneste.service.BrevtjenesteService
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
@@ -15,15 +15,15 @@ import java.time.ZonedDateTime
 class BrevtjenesteController {
 
     @PostMapping(value = ["/avtale"], produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun sendAvtaleTilKunde(@RequestBody body: OpprettAvtale): ResponseEntity<Avtale> {
-        val newUtsendelse = Avtale(BrevtjenesteService.collection.size + 1, body.kundeId, ZonedDateTime.now(), AvtaleStatus.RECEIVED)
-        BrevtjenesteService.collection.add(newUtsendelse)
+    fun sendAvtaleTilKunde(@RequestBody body: SendAvtaleTilKunde): ResponseEntity<Avtale> {
+        val avtale = Avtale(BrevtjenesteService.collection.size + 1L, body.kundeId, ZonedDateTime.now(), AvtaleStatus.RECEIVED)
+        BrevtjenesteService.collection.add(avtale)
 
-        return ResponseEntity.ok(newUtsendelse)
+        return ResponseEntity.ok(avtale)
     }
 
     @GetMapping(value = ["/avtale/{avtaleId}"], produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun getAvtale(@PathVariable avtaleId: Int): ResponseEntity<Avtale> {
+    fun getAvtale(@PathVariable avtaleId: Long): ResponseEntity<Avtale> {
         val avtale = BrevtjenesteService.collection.find { avtale -> avtale.id == avtaleId }
 
         if (avtale != null) {
