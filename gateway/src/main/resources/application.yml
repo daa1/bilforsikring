@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+endpoints:
+  brevtjeneste:
+    host: http://localhost:8082/
+  fagsystem:
+    host: http://localhost:8081/
