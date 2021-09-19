@@ -1,0 +1,17 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  gateway:
+    image: gateway:latest
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+  fagsystem:
+    image: fagsystem:latest
+    container_name: fagsystem-service
+    ports:
+      - "8081:8081"
+  brevtjeneste:
+    image: brevtjeneste:latest
+    container_name: brevtjeneste-service
+    ports:
+      - "8082:8082"

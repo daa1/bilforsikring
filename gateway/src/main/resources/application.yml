@@ -3,6 +3,6 @@ server:
 
 endpoints:
   brevtjeneste:
-    host: http://localhost:8082/
+    host: http://brevtjeneste-service:8082/
   fagsystem:
-    host: http://localhost:8081/
+    host: http://fagsystem-service:8081/

@@ -16,5 +16,5 @@ docker run --publish 8080:8080 gateway
 
 ## Starte tjeneste utenfor docker
 ```Bash
-gradlew bootRun
+gradlew bootRun --args='--spring.profiles.active=dev'
 ```
