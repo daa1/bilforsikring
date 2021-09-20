@@ -25,7 +25,7 @@ class GatewayController(
 
         val avtale: Avtale?
         if (kunde != null) {
-            avtale = fagsystemService.opprettAvtale(OpprettAvtale(body.registereringsnummer, body.bonus, kunde.id))
+            avtale = fagsystemService.opprettAvtale(OpprettAvtale(body.registreringsnummer, body.bonus, kunde.id))
         } else {
             // TODO: mer fornuftig errorbeskjed om at bruker ikke ble opprettet
             return ResponseEntity.internalServerError().build()

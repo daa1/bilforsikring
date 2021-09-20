@@ -1,7 +1,7 @@
 package no.david.gateway.model
 
 data class BestillBilforsikring(
-    val registereringsnummer: String,
+    val registreringsnummer: String,
     val bonus: Int,
     val fodselsnummer: String,
     val fornavn: String,
