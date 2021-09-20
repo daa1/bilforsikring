@@ -32,10 +32,10 @@ export default function Kvittering() {
     <React.Fragment>
       {loading && <p>Laster avtale...</p>}
       {!loading && avtale && (
-        <div>
+        <div className="padding-vertical">
           <h2>Avtale mottatt!</h2>
           <p>
-            Hei {avtale.kunde.fornavn}, vi har motatt din bestilling. Ved spørsmål kontakts oss på{" "}
+            Hei {avtale.kunde.fornavn}, vi har motatt din bestilling. Ved spørsmål kontakt oss på{" "}
             <a href="mailto:post@postkontoret.no">post@postkontoret.no</a> og oppgi avtalenummer {avtale.id}.
           </p>
         </div>

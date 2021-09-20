@@ -19,7 +19,7 @@ export default function BilforsikringSkjema({ bestillCallback }: BilforsikringSk
   const onSubmit = handleSubmit((data) => bestillCallback(data));
 
   return (
-    <form onSubmit={onSubmit} className="forsikring-form">
+    <form onSubmit={onSubmit} className="forsikring-form padding-vertical">
       <div className="form-row">
         <div className="col">
           <TextInput
