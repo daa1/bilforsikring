@@ -1,10 +1,12 @@
+# Brevtjeneste
+
 ## Bygg + tester
 ```Bash
 gradlew build
 ```
 
 ## Lag image av tjenesten
-Artifakt må være bygger før kjøring av denne
+Artifakt må være bygget før kjøring av denne
 ```Bash
 docker build --tag brevtjeneste .
 ```

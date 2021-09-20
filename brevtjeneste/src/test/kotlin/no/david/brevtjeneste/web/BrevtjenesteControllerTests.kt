@@ -15,7 +15,6 @@ import java.time.ZonedDateTime
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import org.junit.jupiter.api.BeforeEach
-import org.mockito.MockitoAnnotations
 
 @WebMvcTest(BrevtjenesteController::class)
 class BrevtjenesteControllerTests {
