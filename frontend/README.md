@@ -1,5 +1,6 @@
+# Frontend
+
 ## Lag image av tjenesten
-Artifakt må være bygger før kjøring av denne
 ```Bash
 docker build --tag frontend .
 ```
@@ -13,9 +14,6 @@ docker run --publish 80:80 frontend
 ```Bash
 yarn start
 ```
-
-
-docker run --publish 80:80 frontend
 
 
 # Getting Started with Create React App
